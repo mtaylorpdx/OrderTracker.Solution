@@ -1,8 +1,11 @@
+@{
+  Layout = "_Layout";
+}
 
-<h1>List of Orders by Date: </h1>
+<h2>Order for @Model["vendor"].VendorName: </h2>
 
-<h2>@Model["order"].Date</h2>
-<h3>Name: @Model["vendor"].VendorName</h3>
+<h3>@Model["order"].Date</h3>
+<h4>Loaves: @Model["order"].BreadCount - Pastries:@Model["order"].PastryCount - Total: $@Model["order"].Total</h4>
 
 <a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a>
 <a href='/vendors'>View all categories</a>
