@@ -4,7 +4,7 @@
   Layout = "_Layout";
 }
 
-<h2>Order list for: @Model["vendor"].VendorName:</h2>
+<h2>Order list for: @Model["vendor"].VendorName</h2>
 <hr>
 
 @if (@Model["orders"].Count == 0)
@@ -18,6 +18,6 @@
   <hr>
 }
 
-<p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></p>
-<p><a href='/vendors'>Return to vendor list</a></p>
+<p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a New Order</a></p>
+<p><a href='/vendors'>Return to Vendor List</a></p>
 <p><a href='/'>Return to Main Page</a></p>
