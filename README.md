@@ -13,8 +13,10 @@ _This application project is an exercise in C# using the MVC framework._
 |----|----|-----|
 |User navigates to the site and is greeted with a splash page|'localhost:5000'|Splash page is displayed|
 |User fills out a vendor form to create a new vendor|User types in name and clicks submit|Entered name is added to a list of vendors|
+|User clicks a link that displays a list of entered vendors|'Click on link'|Vendor list page is displayed|
 |User clicks a vendor name to see that vendor's orders|User clicks on a vendor name in the list|Link redirects to a page displaying that vendor's orders|
 |User fills out an order form that is saved to a specific vendor id|loaves of bread, 2|Suzie's Cafe, loaves of bread, 2|
+|Progam generates a total order cost based on bread for $2 and pastries for $1|User enters an order of 12 loaves and 12 pastries|$36|
 
 
 ## Setup/Installation Requirements
