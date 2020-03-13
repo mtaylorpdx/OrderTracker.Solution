@@ -32,11 +32,6 @@ namespace OrderTracker.Models
       return _instances;
     }
 
-    public static void ClearAll()
-    {
-      _instances.Clear();
-    }
-
     public static Order Find(int searchId)
     {
       return _instances[searchId-1];
