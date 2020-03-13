@@ -7,7 +7,7 @@ namespace OrderTracker.Models
     public string Date {get;set;}
     public int BreadCount {get;set;}
     public int PastryCount {get;set;}
-    public int Total {get;set;}
+    public int Total {get;set;} = 0;
     public int Id {get;}
     private static List<Order> _instances = new List<Order> {};
 
