@@ -34,6 +34,7 @@ Email [@Matt Taylor](mailto:me@email.com)
 * Git
 * C#
 * .NET Core
+* ASP.NET Razor
 
 ### License
 
