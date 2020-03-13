@@ -7,5 +7,19 @@ namespace OrderTracker.Controllers
   public class OrdersController : Controller
   {
 
+    [HttpGet("/vendors/{vendorId}/orders/new")]
+    public ActionResult New(int vendorId)
+    {
+       Vendor vendor = Vendor.Find(vendorId);
+       return View(vendor);
+    }
+
+    [HttpPost("/orders/delete")]
+    public ActionResult DeleteAll()
+    {
+      Order.ClearAll();
+      return View();
+    }
+
   }
 }
