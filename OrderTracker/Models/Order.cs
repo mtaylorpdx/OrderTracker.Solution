@@ -8,6 +8,8 @@ namespace OrderTracker.Models
     public int breadCount {get;set;}
     public int pastryCount {get;set;}
     public int Total {get;set;}
+    public int Id {get;}
+    private static List<Order> _instances = new List<Order> {};
 
     public Order (string date, int breadCount, int pastryCount, int total)
     {
@@ -16,7 +18,7 @@ namespace OrderTracker.Models
       pastryCount = pastryCount;
       Total = total;
       _instances.Add(this);
-      IDictionary = _instances.Count;
+      Id = _instances.Count;
     }
   }
 }
