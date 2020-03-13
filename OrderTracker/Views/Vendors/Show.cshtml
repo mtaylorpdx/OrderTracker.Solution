@@ -4,14 +4,19 @@
   Layout = "_Layout";
 }
 
-<h3>Here are the orders for your vendor:</h3>
+<h2>Order list for: @Model["vendor"].VendorName:</h2>
+<hr>
 
-<ol>
+@if (@Model["orders"].Count == 0)
+{
+  <p>No orders have yet been added. <a href='/vendors/@Model["vendor"].Id/orders/new'>Click here</a> to add one.</p>
+  <hr>
+} 
 @foreach (Order order in @Model["orders"])
 {
-  <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Date</a> - Loaves: @order.BreadCount - Pastries:@order.PastryCount - Total: $@order.Total</li>
+  <p><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Date</a> - Loaves: @order.BreadCount - Pastries:@order.PastryCount - Total: $@order.Total</p>
+  <hr>
 }
-</ol>
 
 <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></p>
 <p><a href='/vendors'>Return to vendor list</a></p>
